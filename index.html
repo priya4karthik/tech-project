@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tech Company Navbar</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+<style>
+    :root {
+        --purple-bg: #DC9AF2;
+        --yellow-accent: #DCFF16;
+        --green-btn: #13B82E;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;}
+        
+
+    .navbar-custom {
+        background: var(--purple-bg);
+        padding: 15px 0;
+    }
+
+    .logo {
+        width: 55px;
+    }
+
+    .logo-title {
+        font-family: 'Inika', serif;
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+
+    .search-box input {
+        height: 45px;
+    }
+
+    .nav-links a {
+        text-decoration:none;
+        color: black;
+        font-weight: 600;
+        margin: 0 18px;
+        display: inline-block;
+    }
+
+    .nav-links a:hover {
+        color: var(--yellow-accent);
+    }
+
+    .register-btn {
+        background: var(--green-btn);
+        color: white;
+        padding: 8px 22px;
+        /* border-radius: 10px; */
+        font-weight: bold;
+        /* border: 2px solid black; */
+    }
+
+    /* Make dropdown menu background purple */
+    .navbar-collapse {
+        background: var(--purple-bg);
+        padding-bottom: 15px;
+    }
+.footer-section {
+    background: #e8ff63;   /* exact yellow-green shade */
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+
+
+.hero-section {
+background: url('img/bg-header.avif') center/cover no-repeat;
+padding: 80px 0;
+color: white;
+border-radius: 10px;
+overflow: hidden;
+margin-left: -25px;
+margin-right: -25px;
+}
+
+
+.hero-text h1 {
+font-size: 3rem;
+font-weight: 700;
+}
+
+
+.hero-text p {
+font-size: 1.4rem;
+font-weight: 500;
+}
+
+
+.robot-img img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 20px;
+}
+
+
+.doodle {
+width: 220px;
+position: absolute;
+left: 40%;
+bottom: -20px;
+}
+
+
+.start-btn {
+background: #e79a2d;
+padding: 10px 28px;
+border-radius: 8px;
+font-weight: 600;
+border: none;
+margin-top: 20px;
+}
+
+
+.social-icons i {
+font-size: 28px;
+margin-right: 18px;
+cursor: pointer;
+}
+
+
+@media (max-width: 992px) {
+.hero-text h1 {
+font-size: 2.4rem;
+}
+.hero-text p {
+font-size: 1.2rem;
+}
+}
+.heading-title {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.choose-box img {
+   width: 100%;
+    height: 220px;     /* fixed height (adjust as needed) */
+    object-fit: cover; /* keeps image centered + same size */
+    border-radius: 12px;
+}
+
+.description-text {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    font-weight: 500;
+}
+.choose-box figcaption {
+    min-height: 45px;   /* adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Section title */
+.section-title {
+text-align: center;
+font-size: 28px;
+font-weight: 700;
+margin-bottom: 40px;
+}
+.watch-img {
+width: 100%;
+max-width: 280px;
+
+}
+.orange-box {
+background: #f5811f;
+color: #fff;
+padding: 25px;
+
+/* border-radius: 6px; */
+position: relative;
+max-width: 550px;
+/* top inner shadow */
+box-shadow: inset 0 6px 8px -6px rgba(0,0,0,0.6);
+}
+.orange-box::before {
+content: "";
+position: absolute;
+left: -59px;
+top: 0;
+width: 60px;
+height: 100%;
+background: #f5821f;
+clip-path: polygon(0 50%, 100% 0, 100% 100%);
+/* top inner shadow for triangle */
+/* box-shadow: inset -10px 0px 15px rgba(191, 65, 7, 0.715); */
+}
+.orange-title {
+font-size: 20px;
+font-weight: 700;
+margin-bottom: 10px;
+}
+
+</style>
+</head>
+
+<body data-aos="slide-right" data-aos-duration="2000"  data-aos-easing="ease-in-out">
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+
+        <!-- LEFT SECTION: Logo + Text -->
+        <div class="text-center me-3">
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <div class="logo-title">Tech Company</div>
+        </div>
+
+        <!-- HAMBURGER BUTTON -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- COLLAPSIBLE CONTENT -->
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <!-- CENTER COLUMN -->
+            <div class="mx-auto text-center">
+
+                <!-- Search Box -->
+                <div class="search-box mx-auto" style="max-width: 600px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search For">
+                        <span class="input-group-text bg-white">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- NAV LINKS -->
+                <div class="nav-links mt-3">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="product.html">Product</a>
+                    <a href="services.html">Service</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="blogs.html">Blogs</a>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE ICONS -->
+            <div class="d-flex align-items-center ms-auto mt-3 mt-lg-0">
+                <i class="fa fa-shopping-cart fs-4 mx-3"></i>
+                <i class="fa fa-bell fs-4 mx-3"></i>
+                <a href="register.html">
+                <button class="register-btn ms-2">Register</button></a>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+<section class="container-fluid p-4">
+<div class="row hero-section position-relative g-4">
+
+
+<div class="col-lg-6 hero-text">
+<h1>Startup Tech<br>Product</h1>
+<p>This speaks directly to what tech founders and engineers care about: speed, reliability, and growth</p>
+<button class="start-btn">Let's Start</button>
+</div>
+
+
+<div class="col-lg-6 robot-img">
+<img src="img/robo.png" alt="Robot Image" />
+</div>
+
+
+<!-- <img src="doodle.png" class="doodle" alt="doodle" /> -->
+</div>
+
+
+<div class="text-end mt-4 social-icons">
+<i class="bi bi-twitter"></i>
+<i class="bi bi-linkedin"></i>
+<i class="bi bi-facebook"></i>
+</div>
+</section>
+
+<section class="why-choose-us py-5">
+    <div class="container">
+
+        <!-- Heading -->
+        <header class="text-center mb-5">
+            <h1 class="heading-title">Why Choose Us</h1>
+        </header>
+
+        <!-- Features Section -->
+        <section class="row g-4 justify-content-center">
+
+            <!-- Feature 1 -->
+            <article class="col-12 col-sm-6 col-lg-3 text-center">
+                <figure class="choose-box shadow-sm p-3 rounded-3">
+                    <img src="img/Rectangle 177.png" class="img-fluid rounded-3" alt="Magnetic Charging Cable">
+                    <figcaption class="mt-2 fw-semibold">Magnetic Charging Cable</figcaption>
+                </figure>
+            </article>
+
+            <!-- Feature 2 -->
+            <article class="col-12 col-sm-6 col-lg-3 text-center">
+                <figure class="choose-box shadow-sm p-3 rounded-3">
+                    <img src="img/craiyon_192751_image 1.png" class="img-fluid rounded-3" alt="Extra Silicon Strap">
+                    <figcaption class="mt-2 fw-semibold">Extra Silicon Strap</figcaption>
+                </figure>
+            </article>
+
+            <!-- Feature 3 -->
+            <article class="col-12 col-sm-6 col-lg-3 text-center">
+                <figure class="choose-box shadow-sm p-3 rounded-3">
+                    <img src="img/craiyon_193836_image 1.png" class="img-fluid rounded-3" alt="Quick Start Guide">
+                    <figcaption class="mt-2 fw-semibold">Quick Start Guide</figcaption>
+                </figure>
+            </article>
+
+            <!-- Feature 4 -->
+            <article class="col-12 col-sm-6 col-lg-3 text-center">
+                <figure class="choose-box shadow-sm p-3 rounded-3">
+                    <img src="img/craiyon_193035_image 1.png" class="img-fluid rounded-3" alt="Fitness Tracker">
+                    <figcaption class="mt-2 fw-semibold">Fitness Tracker</figcaption>
+                </figure>
+            </article>
+
+        </section>
+
+        <!-- Description -->
+        <article class="row mt-5">
+            <div class="col-lg-10 mx-auto">
+                <p class="description-text text-center">
+                    Pulsex Pro Isn’t just a smartwatch– it’s your personal coach, health monitor,
+                    and digital assistant all in one sleek device. Built for those who demand
+                    more from their tech, it helps you stay connected.
+                </p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<div class="container">
+<h2 class="section-title">Product In Context</h2>
+
+
+<!-- BLOCK 1 -->
+<div class="row align-items-center mb-5">
+<div class="col-lg-6 text-center">
+    <!-- <div class="img-wrap"></div> -->
+<img src="img/craiyon_195659_image 1.png" class="watch-img" />
+</div>
+<div class="col-lg-6">
+<div class="orange-box">
+<div class="orange-title">Xiaomi Watch S3 1.43” AMOLED Smartwatch</div>
+<p style="color: #000; font-size: 14px;">
+Features a 1.43” AMOLED display with 600 nits brightness and sharp 326 ppi,
+ideal for crisp visuals in outdoor lighting. Offers LTE connectivity,
+allowing for phone‑free calls and data.
+</p>
+</div>
+
+</div>
+
+
+<!-- BLOCK 2 -->
+<div class="row align-items-center  mb-5">
+<div class="col-lg-6 text-center">
+<img src="img/craiyon_195804_image 1.png" class="watch-img" />
+</div>
+<div class="col-lg-6">
+<div class="orange-box">
+<div class="orange-title">Xiaomi Watch S3 1.43” AMOLED Smartwatch</div>
+<p style="color: #000; font-size: 14px;">
+Packs a 520 mAh battery and adaptive refresh rate for performance and
+longevity. A stylish LTE‑ready wearable for everyday use.<br>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    
+<footer class="footer-section">
+  <div class="container py-5">
+
+    <div class="row gy-4 align-items-start">
+
+      <!-- LOGO + NAME -->
+      <div class="col-md-3 d-flex flex-column align-items-start">
+        <img src="img/logo1.png" alt="logo" width="100" class="mb-2">
+        <h4 class="fw-bold mt-2 align-items-start">Tech Company</h4>
+      </div>
+
+      <!-- Company -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Company</h6>
+        <nav>
+          <ul class="list-unstyled footer-links">
+            <li><a href="about.html">About US</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Testimonial</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Support -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Support</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Webians</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Links -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Course</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">All in ond</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h6 class="fw-bold mb-3">Contact US</h6>
+
+        <p class="mb-2">
+          <i class="bi bi-telephone-fill me-2"></i> +917789879034
+        </p>
+
+        <p>
+          <i class="bi bi-envelope-fill me-2"></i> nazer2000@gmail
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Social Icons -->
+    <div class="d-flex gap-4 mt-4 justify-content-end">
+      <i class="bi bi-google fs-3"></i>
+      <i class="bi bi-twitter fs-3"></i>
+      <i class="bi bi-linkedin fs-3"></i>
+      <i class="bi bi-facebook fs-3"></i>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

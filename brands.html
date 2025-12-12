@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tech Company Navbar</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<style>
+    :root {
+        --purple-bg: #DC9AF2;
+        --yellow-accent: #DCFF16;
+        --green-btn: #13B82E;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .navbar-custom {
+        background: var(--purple-bg);
+        padding: 15px 0;
+    }
+
+    .logo {
+        width: 55px;
+    }
+
+    .logo-title {
+        font-family: 'Inika', serif;
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+
+    .search-box input {
+        height: 45px;
+    }
+
+    .nav-links a {
+        text-decoration:none;
+        color: black;
+        font-weight: 600;
+        margin: 0 18px;
+        display: inline-block;
+    }
+
+    .nav-links a:hover {
+        color: var(--yellow-accent);
+    }
+
+    .register-btn {
+        background: var(--green-btn);
+        color: white;
+        padding: 8px 22px;
+        /* border-radius: 10px; */
+        font-weight: bold;
+        /* border: 2px solid black; */
+    }
+
+    /* Make dropdown menu background purple */
+    .navbar-collapse {
+        background: var(--purple-bg);
+        padding-bottom: 15px;
+    }
+.footer-section {
+    background: #e8ff63;   /* exact yellow-green shade */
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+        .brand-box img {
+            width: 180px;
+            height: auto;
+            object-fit: contain;
+        }
+        .brand-box {
+            padding: 20px 0;
+            text-align: center;
+        }
+        h2, h4 {
+            text-align: center;
+            font-weight: 600;
+        }
+            h3 {
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        .brand-box {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .brand-box:hover{
+          transform: translateY(5px);
+        }
+        .brand-box img {
+            width: 180px;
+            height: auto;
+            object-fit: contain;
+        }
+
+</style>
+</head>
+
+<body  data-aos="slide-right">
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+
+        <!-- LEFT SECTION: Logo + Text -->
+        <div class="text-center me-3">
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <div class="logo-title">Tech Company</div>
+        </div>
+
+        <!-- HAMBURGER BUTTON -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- COLLAPSIBLE CONTENT -->
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <!-- CENTER COLUMN -->
+            <div class="mx-auto text-center">
+
+                <!-- Search Box -->
+                <div class="search-box mx-auto" style="max-width: 600px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search For">
+                        <span class="input-group-text bg-white">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- NAV LINKS -->
+                <div class="nav-links mt-3">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="product.html">Product</a>
+                    <a href="services.html">Service</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="blogs.html">Blogs</a>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE ICONS -->
+            <div class="d-flex align-items-center ms-auto mt-3 mt-lg-0">
+                <i class="fa fa-shopping-cart fs-4 mx-3"></i>
+                <i class="fa fa-bell fs-4 mx-3"></i>
+                <a href="register.html">
+                <button class="register-btn ms-2">Register</button></a>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<div class="container py-5">
+
+    <h2>All Brands Are Available</h2>
+    <h4 class="mt-4 mb-4">Mobiles Brands</h4>
+
+    <div class="row g-5">
+
+        <!-- VIVO -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+               <a href="vivo.html"> <img src="img/Rectangle 234.png" alt="Vivo"></a>
+            </div>
+        </div>
+
+        <!-- REALME -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+             <a href="realme.html">   <img src="img/Rectangle 227.png" alt="Realme"> </a>
+            </div>
+        </div>
+
+        <!-- MI -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 228.png" alt="MI">
+            </div>
+        </div>
+
+        <!-- iPhone -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 213.png" alt="iPhone">
+            </div>
+        </div>
+
+        <!-- OPPO -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+            <a href="oppo.html">    <img src="img/Rectangle 290.png" alt="Oppo"></a>
+            </div>
+        </div>
+
+        <!-- Infinix -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 215.png" alt="Infinix">
+            </div>
+        </div>
+
+        <!-- ASUS -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 240.png" alt="Asus">
+            </div>
+        </div>
+
+        <!-- ONEPLUS -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 217.png" alt="OnePlus">
+            </div>
+        </div>
+
+        <!-- IQOO -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 235.png" alt="iqoo">
+            </div>
+        </div>
+
+        <!-- POCO -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 243.png" alt="Poco">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container py-4">
+    <h3 class="text-center">Electro Product Brands</h3>
+
+    <div class="row g-5">
+
+        <!-- LG -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+             <a href="refregirator.html">   <img src="img/Rectangle 289.png" alt="LG"></a>
+            </div>
+        </div>
+
+        <!-- Panasonic -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+              <a href="refregirator.html">  <img src="img/Rectangle 214.png" alt="Panasonic"></a>
+            </div>
+        </div>
+
+        <!-- Voltas -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+             <a href="refregirator.html">    <img src="img/Rectangle 239.png" alt="Voltas"></a>
+            </div>
+        </div>
+
+        <!-- Bosch -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+              <a href="refregirator.html">   <img src="img/Rectangle 216.png" alt="Bosch"></a>
+            </div>
+        </div>
+
+        <!-- Daikin -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+              <a href="refregirator.html">   <img src="img/Rectangle 241.png" alt="Daikin"></a>
+            </div>
+        </div>
+
+        <!-- Haier -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+               <a href="refregirator.html"> <img src="img/Rectangle 218.png" alt="Haier"></a>
+            </div>
+        </div>
+
+        <!-- Carrier -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 219.png" alt="Carrier">
+            </div>
+        </div>
+
+        <!-- Hitachi -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 220.png" alt="Hitachi">
+            </div>
+        </div>
+
+        <!-- Sony -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 221.png" alt="Sony">
+            </div>
+        </div>
+
+        <!-- Godrej -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 222.png" alt="Godrej">
+            </div>
+        </div>
+
+        <!-- Whirlpool -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+              <a href="refregirator.html">  <img src="img/Rectangle 223.png" alt="Whirlpool"></a>
+            </div>
+        </div>
+
+        <!-- Samsung -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 224.png" alt="Samsung">
+            </div>
+        </div>
+
+        <!-- Philips -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 225.png" alt="Philips">
+            </div>
+        </div>
+
+        <!-- Last Logo -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 226.png" alt="Brand">
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container py-5">
+
+        <h4 class="mt-4 mb-4">gadgets Brands</h4>
+
+    <div class="row g-5">
+
+        <!-- VIVO -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 227.png" alt="realme">
+            </div>
+        </div>
+
+        <!-- REALME -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 236.png" alt="mi">
+            </div>
+        </div>
+
+        <!-- MI -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 229.png" alt="">
+            </div>
+        </div>
+
+        <!-- iPhone -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 230.png" alt="boat">
+            </div>
+        </div>
+
+        <!-- OPPO -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 231.png" alt="fastrack">
+            </div>
+        </div>
+
+        <!-- Infinix -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 232.png" alt="titan">
+            </div>
+        </div>
+
+        <!-- ASUS -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 233.png" alt="seiko">
+            </div>
+        </div>
+
+        <!-- ONEPLUS -->
+        <div class="col-md-6 col-12">
+            <div class="brand-box">
+                <img src="img/Rectangle 244.png" alt="rolex">
+            </div>
+        </div>
+
+      
+
+    </div>
+</div>
+
+
+<footer class="footer-section">
+  <div class="container py-5">
+
+    <div class="row gy-4 align-items-start">
+
+      <!-- LOGO + NAME -->
+      <div class="col-md-3 d-flex flex-column align-items-start">
+        <img src="img/logo1.png" alt="logo" width="100" class="mb-2">
+        <h4 class="fw-bold mt-2 align-items-start">Tech Company</h4>
+      </div>
+
+      <!-- Company -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Company</h6>
+        <nav>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">About US</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Testimonial</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Support -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Support</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Webians</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Links -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Course</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">All in ond</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h6 class="fw-bold mb-3">Contact US</h6>
+
+        <p class="mb-2">
+          <i class="bi bi-telephone-fill me-2"></i> +917789879034
+        </p>
+
+        <p>
+          <i class="bi bi-envelope-fill me-2"></i> nazer2000@gmail
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Social Icons -->
+    <div class="d-flex gap-4 mt-4 justify-content-end">
+      <i class="bi bi-google fs-3"></i>
+      <i class="bi bi-twitter fs-3"></i>
+      <i class="bi bi-linkedin fs-3"></i>
+      <i class="bi bi-facebook fs-3"></i>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

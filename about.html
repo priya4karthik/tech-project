@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tech Company Navbar</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<style>
+    :root {
+        --purple-bg: #DC9AF2;
+        --yellow-accent: #DCFF16;
+        --green-btn: #13B82E;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+    .navbar-custom {
+        background: var(--purple-bg);
+        padding: 15px 0;
+    }
+
+    .logo {
+        width: 55px;
+    }
+
+    .logo-title {
+        font-family: 'Inika', serif;
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+
+    .search-box input {
+        height: 45px;
+    }
+
+    .nav-links a {
+        text-decoration:none;
+        color: black;
+        font-weight: 600;
+        margin: 0 18px;
+        display: inline-block;
+    }
+
+    .nav-links a:hover {
+        color: var(--yellow-accent);
+    }
+
+    .register-btn {
+        background: var(--green-btn);
+        color: white;
+        padding: 8px 22px;
+        /* border-radius: 10px; */
+        font-weight: bold;
+        /* border: 2px solid black; */
+    }
+
+    /* Make dropdown menu background purple */
+    .navbar-collapse {
+        background: var(--purple-bg);
+        padding-bottom: 15px;
+    }
+.footer-section {
+    background: #e8ff63;   /* exact yellow-green shade */
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+.heading-title {
+ 
+text-align: center;
+font-size: 28px;
+font-weight: 700;
+margin-bottom: 40px;
+}
+/* Background colors same as screenshot */
+.purple-bg {
+  background: var(--purple-bg);
+}
+
+.orange-bg {
+  background: #f6b26b;
+}
+
+.green-bg {
+  background: #e8ff63;
+}
+
+/* General card formatting */
+.testimonial-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Image styling */
+.testimonial-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Responsive height fix */
+@media (max-width: 768px) {
+  .testimonial-img {
+    height: 180px;
+  }
+}
+
+</style>
+</head>
+
+<body  data-aos="slide-right" data-aos-duration="2000"  data-aos-easing="ease-in-out">
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+
+        <!-- LEFT SECTION: Logo + Text -->
+        <div class="text-center me-3">
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <div class="logo-title">Tech Company</div>
+        </div>
+
+        <!-- HAMBURGER BUTTON -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- COLLAPSIBLE CONTENT -->
+        <div class="collapse navbar-collapse" id="mainNav">
+
+            <!-- CENTER COLUMN -->
+            <div class="mx-auto text-center">
+
+                <!-- Search Box -->
+                <div class="search-box mx-auto" style="max-width: 600px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search For">
+                        <span class="input-group-text bg-white">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- NAV LINKS -->
+                <div class="nav-links mt-3">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="product.html">Product</a>
+                    <a href="services.html">Service</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="blogs.html">Blogs</a>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE ICONS -->
+            <div class="d-flex align-items-center ms-auto mt-3 mt-lg-0">
+                <i class="fa fa-shopping-cart fs-4 mx-3"></i>
+                <i class="fa fa-bell fs-4 mx-3"></i>
+                <a href="register.html">
+                <button class="register-btn ms-2">Register</button></a>
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<section class="testimonials-section py-5">
+  <div class="container">
+<h1 class="heading-title">About Us</h1>
+    <!-- CARD 1 -->
+    <article class="testimonial-card purple-bg mb-4 p-3 p-md-4 rounded-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-4">
+          <img src="img/Rectangle 287.png" alt="Amanda" class="img-fluid rounded-3 shadow-sm testimonial-img">
+        </div>
+        <div class="col-md-8">
+          <h4 class="fw-bold mb-2">Amanda Faulkner (New Zealand)</h4>
+          <p class="mb-0">
+            “My Apple Watch kept sending alerts that my resting heart rate was way higher than normal…  
+            I eventually decided to see my GP. That decision probably saved my life—it led to a diagnosis of acute myeloid leukemia.”
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="testimonial-card orange-bg mb-4 p-3 p-md-4 rounded-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-4">
+          <img src="img/Rectangle 261.png" alt="Sneha" class="img-fluid rounded-3 shadow-sm testimonial-img">
+        </div>
+        <div class="col-md-8">
+          <h4 class="fw-bold mb-2">Sneha Saha (Delhi, India)</h4>
+          <p class="mb-0">
+            “If the Apple Watch had not alerted me of the serious condition around midnight, I would have lost my life.”  
+            Her atrial fibrillation—heart rate exceeding 230 bpm—was detected during a potential episode prompting emergency care.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="testimonial-card green-bg mb-4 p-3 p-md-4 rounded-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-4">
+          <img src="img/Rectangle 262.png" alt="Frank" class="img-fluid rounded-3 shadow-sm testimonial-img">
+        </div>
+        <div class="col-md-8">
+          <h4 class="fw-bold mb-2">Frank Haggerty (New Jersey, USA)</h4>
+          <p class="mb-0">
+            “Quite frankly, had I not had the watch on, I wouldn’t be sitting here today.  
+            His Apple Watch detected a resting heart rate of just 30 bpm, leading to a pacemaker implant for complete heart block.”
+          </p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+
+<footer class="footer-section">
+  <div class="container py-5">
+
+    <div class="row gy-4 align-items-start">
+
+      <!-- LOGO + NAME -->
+      <div class="col-md-3 d-flex flex-column align-items-start">
+        <img src="img/logo1.png" alt="logo" width="100" class="mb-2">
+        <h4 class="fw-bold mt-2 align-items-start">Tech Company</h4>
+      </div>
+
+      <!-- Company -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Company</h6>
+        <nav>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">About US</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Testimonial</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Support -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Support</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Webians</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Links -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Course</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">All in ond</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-3">
+        <h6 class="fw-bold mb-3">Contact US</h6>
+
+        <p class="mb-2">
+          <i class="bi bi-telephone-fill me-2"></i> +917789879034
+        </p>
+
+        <p>
+          <i class="bi bi-envelope-fill me-2"></i> nazer2000@gmail
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Social Icons -->
+    <div class="d-flex gap-4 mt-4 justify-content-end">
+      <i class="bi bi-google fs-3"></i>
+      <i class="bi bi-twitter fs-3"></i>
+      <i class="bi bi-linkedin fs-3"></i>
+      <i class="bi bi-facebook fs-3"></i>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
